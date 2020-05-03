@@ -1,0 +1,26 @@
+<h1>Dashboard component</h1><br/>
+<div id="table-content">
+<table class="table"> 
+    <thead class="thead-dark">
+        <tr> 
+        <th scope="col">State</th>
+        <th scope="col">Confirmed</th>
+        <th scope="col">Active</th>
+        <th scope="col">Recovered</th>
+        <th scope="col">Deceased</th>
+        </tr>
+        </thead>
+    <tbody *ngFor="let state of statesInfoList">
+    <tr>
+        <td><button class="state-btn btn" (click)="getStateDistrictInfo(state.state)">{{state.state}}</button></td>
+        <td>{{state.confirmed}}</td>
+        <td>{{state.active}}</td>
+        <td>{{state.recovered}}</td>
+        <td>{{state.deaths}}</td>
+    </tr>
+    <tr *ngIf="(selectedState == state.state && isDistrictDataVisible)">
+        <app-district [districtsInfo]="districtInfoList"></app-district>
+    </tr>
+</tbody>
+</table>
+</div>

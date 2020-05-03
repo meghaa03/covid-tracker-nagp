@@ -1,0 +1,18 @@
+#header{
+    background-color: #171A4F;    
+}
+
+.header-text
+{
+    color:white;
+}
+
+#logout-button
+{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}

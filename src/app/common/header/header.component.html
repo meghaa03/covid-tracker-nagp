@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-sm sticky-top" id="header">
+    <div class="navbar-header"></div> 
+    <ul class="navbar-nav">
+    <li class="nav-item"><a class="nav-link header-text" href="#">Covid19 India</a></li>&nbsp
+    <li class="nav-item"><a class="nav-link header-text" routerLink="/dashboard">Dashboard</a></li>
+    <li class="nav-item"><a class="nav-link header-text" routerLink="/newsdisplay">News Section</a></li>
+    <li class="nav-item"><a class="nav-link header-text" routerLink="/precautions">Precautions</a></li>
+    <li class="nav-item" *ngIf="!isUserLoggedIn"><a class="nav-link header-text" routerLink="/login">Login</a></li>
+    <li class="nav-item"*ngIf="isUserLoggedIn"><a class="nav-link header-text" routerLink="/newsupdate">Update News</a></li>
+    <li class="nav-item" *ngIf="isUserLoggedIn"><button id="logout-button" class="nav-link header-text" (click)="Logout()">Logout</button></li>
+    </ul>
+</nav>
+<br />
+   

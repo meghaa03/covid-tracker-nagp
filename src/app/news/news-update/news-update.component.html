@@ -1,0 +1,28 @@
+<div id="add-news" class="container">
+    <h2>Add News</h2>
+    <hr />
+    <form [formGroup]="newsUpdateForm" (ngSubmit)="updateNews()">
+
+        <div class="form-group">
+            <input placeholder="Title" type="text" class="form-control" formControlName="title" />
+            <div class="error-msg" *ngIf="newsUpdateForm.get('title').touched && newsUpdateForm.get('title').errors?.required">Title is required</div>
+        </div>
+
+        <div class="form-group">
+            <input placeholder="Description" type="text" class="form-control" formControlName="description" />
+            <div class="error-msg" *ngIf="newsUpdateForm.get('description').touched && newsUpdateForm.get('description').errors?.required">Description is required</div>
+        </div>
+        <div class="form-group">
+            <textarea placeholder="Summary" formControlName="summary" class="form-control" rows="3" cols="30"></textarea>
+            <div class="error-msg" *ngIf="newsUpdateForm.get('summary').touched && newsUpdateForm.get('summary').errors?.required">Summary is required</div>
+        </div>
+        <div class="form-group">
+            <textarea placeholder="Full News" formControlName="fullNews" class="form-control" rows="4" cols="30"></textarea>
+            <div class="error-msg" *ngIf="newsUpdateForm.get('fullNews').touched && newsUpdateForm.get('fullNews').errors?.required">Full News is required</div>
+        </div>
+        <div>
+            <input type="submit" class="form-control btn btn-dark" value="Submit" [disabled]="!newsUpdateForm.valid"/>
+        </div>
+        <p-toast position="bottom-right" ></p-toast>
+    </form>
+</div>

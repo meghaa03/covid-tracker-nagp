@@ -1,22 +1,23 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from './app.component';
+import { HeaderComponent } from './header.component';
 
-describe('AppComponent', () => {
+describe('HeaderComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        HeaderComponent
       ],
     }).compileComponents();
   }));
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+  it('should create the header', () => {
+    const fixture = TestBed.createComponent(HeaderComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
+
 });

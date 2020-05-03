@@ -1,0 +1,15 @@
+#add-news
+{
+    width: 50%;
+    border: 2px solid lightgray;
+    padding: 15px;
+}
+
+h2{
+    text-align: center;
+}
+
+.error-msg
+{
+    color: red;
+}

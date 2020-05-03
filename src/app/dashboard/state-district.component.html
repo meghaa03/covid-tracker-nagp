@@ -1,0 +1,22 @@
+<div id="table-content">
+<table class="table">
+    <thead class="thead-dark">
+    <tr> 
+    <th scope="col">District</th>
+    <th scope="col">Confirmed</th>
+    <th scope="col">Active</th>
+    <th scope="col">Recovered</th>
+    <th scope="col">Deceased</th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let district of districtsInfo | keyvalue">
+        <tr>
+            <td>{{district.key}}</td>
+            <td>{{district.value.confirmed}}</td>
+            <td>{{district.value.active}}</td>
+            <td>{{district.value.recovered}}</td>
+            <td>{{district.value.deceased}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

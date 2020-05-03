@@ -1,0 +1,19 @@
+<div id="news-display" class="container">
+    <h3 id="news-heading">News Section</h3><hr />
+    <div id="news-item" *ngFor="let news of newsList">
+        <div id="title">
+            <p><b>Title:</b> {{news.title}}</p>
+        </div>
+        <div id="description">
+            <p><b>Description:</b> {{news.description}}</p>
+        </div>
+        <div id="summary">
+            <p><b>Summary:</b> {{news.summary}}</p>
+        </div>
+        <div id="fullnews">
+            <p><b>Full News:</b> {{news.fullNews}}</p>
+        </div>
+        <hr/><hr/>
+    </div>
+</div>
+<br /><br /><br /><br />
